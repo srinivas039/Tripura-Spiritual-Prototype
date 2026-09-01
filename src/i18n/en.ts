@@ -24,6 +24,43 @@ export const en = {
     flexibleLearning: "Learn At Your Own Pace",
     personalGuidance: "Personal Mentor Support"
   },
+  offeringsGrid: {
+    sectionTag: "OFFERINGS & PATHWAYS",
+    sectionTitle: "Explore Our Guided Practices",
+    sectionSubtitle: "Designed to nurture awareness, body healing, prana balance, and quiet late-evening stillness.",
+    card1: {
+      tag: "11-DAY JOURNEY",
+      category: "SELF TRANSFORMATION",
+      title: "Inner Self Engineering",
+      desc: "A guided exploration of awareness, patterns and inner transformation.",
+      meta: "11 DAYS • 60 MIN DAILY",
+      price: "₹599"
+    },
+    card2: {
+      tag: "21-DAY PROGRAM",
+      category: "HEALING",
+      title: "Deep Healing Journey",
+      desc: "Three weeks of gentle healing practices for the body, breath and emotional field.",
+      meta: "21 DAYS • 45 MIN DAILY",
+      price: "₹999"
+    },
+    card3: {
+      tag: "SPECIAL WORKSHOP",
+      category: "SPECIAL WORKSHOPS",
+      title: "Hanuman Kriya",
+      desc: "A single-day intensive of movement, breath and sound for strength and vitality.",
+      meta: "SPECIAL WORKSHOP",
+      price: "₹499"
+    },
+    card4: {
+      tag: "GUIDED PRACTICE",
+      category: "SPIRITUAL PRACTICES",
+      title: "Sacred Night Ritual",
+      desc: "A quiet late-evening practice of light, sound and stillness.",
+      meta: "90 MINUTES",
+      price: "₹299"
+    }
+  },
   aboutSection: {
     title: "A Peaceful Space for Spiritual Seeking",
     motto: "SIMPLE • AUTHENTIC • TRANSFORMATIVE",
