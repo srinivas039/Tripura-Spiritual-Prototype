@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useApp } from '../context/AppContext';
 import { MusicControl } from './MusicControl';
-import { Menu, X, User, Shield, Sparkles } from 'lucide-react';
+import { Menu, X, User, Shield } from 'lucide-react';
 
 interface HeaderProps {
   activeTab: string;
@@ -12,19 +12,6 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
   const { language, setLanguage, t, user, openAuthModal } = useApp();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const navItems = [
-    { id: 'home', label: t.nav.home },
-    { id: 'about', label: t.nav.about },
-    { id: 'sessions', label: t.nav.sessions },
-    { id: 'demo', label: t.nav.demoClass },
-    { id: 'plans', label: t.nav.plans },
-    { id: 'onetoone', label: t.nav.oneToOne },
-  ];
-
-  if (user.isLoggedIn) {
-    navItems.push({ id: 'dashboard', label: t.nav.dashboard });
-  }
-
   const handleNavClick = (id: string) => {
     setActiveTab(id);
     setMobileMenuOpen(false);
@@ -32,115 +19,126 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full glass-panel shadow-sm border-b border-amber-100/60 transition-all">
+    <header className="sticky top-0 z-40 w-full bg-[#F8F5EE]/95 backdrop-blur-md border-b border-[#E6E0D2] shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
-          {/* Brand Logo */}
+          {/* Brand Logo - Matching reference image "T R I P U R A ." */}
           <div 
             onClick={() => handleNavClick('home')}
-            className="flex items-center gap-3 cursor-pointer group"
+            className="cursor-pointer group flex items-center"
           >
-            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-500 via-orange-400 to-amber-300 flex items-center justify-center text-white shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform duration-300">
-              <span className="text-xl font-serif">🪷</span>
-            </div>
-            <div>
-              <span className="font-serif text-lg sm:text-xl font-bold tracking-widest text-stone-900 group-hover:text-amber-700 transition">
-                {t.nav.brand}
-              </span>
-              <span className="block text-[10px] uppercase tracking-widest text-amber-600 font-semibold -mt-1">
-                tripuraspiritual.com
-              </span>
-            </div>
+            <span className="font-serif text-2xl sm:text-3xl font-semibold tracking-[0.25em] text-[#2C2421] group-hover:text-[#8B5E34] transition">
+              TRIPURA
+            </span>
+            <span className="font-serif text-2xl sm:text-3xl font-extrabold text-[#D1A559] ml-1">.</span>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleNavClick(item.id)}
-                className={`px-3 py-2 rounded-full text-sm font-medium transition-all ${
-                  activeTab === item.id
-                    ? 'bg-amber-100/80 text-amber-900 font-semibold shadow-xs'
-                    : 'text-stone-700 hover:text-amber-800 hover:bg-stone-100/70'
-                }`}
-              >
-                {item.label}
-              </button>
-            ))}
-
+          <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
             <button
-              onClick={() => handleNavClick('admin')}
-              className={`flex items-center gap-1 px-3 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition ${
-                activeTab === 'admin'
-                  ? 'bg-stone-900 text-amber-300'
-                  : 'bg-stone-200/70 text-stone-700 hover:bg-stone-300/80'
+              onClick={() => handleNavClick('home')}
+              className={`text-xs font-semibold tracking-[0.15em] uppercase transition ${
+                activeTab === 'home' ? 'text-[#8B5E34] border-b-2 border-[#8B5E34] pb-1' : 'text-[#5C534E] hover:text-[#2C2421]'
               }`}
             >
-              <Shield className="w-3.5 h-3.5 text-amber-500" />
-              <span>Admin</span>
+              {t.nav.home}
+            </button>
+
+            <button
+              onClick={() => handleNavClick('sessions')}
+              className={`text-xs font-semibold tracking-[0.15em] uppercase transition ${
+                activeTab === 'sessions' ? 'text-[#8B5E34] border-b-2 border-[#8B5E34] pb-1' : 'text-[#5C534E] hover:text-[#2C2421]'
+              }`}
+            >
+              {t.nav.sessions}
+            </button>
+
+            <button
+              onClick={() => handleNavClick('about')}
+              className={`text-xs font-semibold tracking-[0.15em] uppercase transition ${
+                activeTab === 'about' ? 'text-[#8B5E34] border-b-2 border-[#8B5E34] pb-1' : 'text-[#5C534E] hover:text-[#2C2421]'
+              }`}
+            >
+              {t.nav.about}
+            </button>
+
+            <button
+              onClick={() => handleNavClick('plans')}
+              className={`text-xs font-semibold tracking-[0.15em] uppercase transition ${
+                activeTab === 'plans' ? 'text-[#8B5E34] border-b-2 border-[#8B5E34] pb-1' : 'text-[#5C534E] hover:text-[#2C2421]'
+              }`}
+            >
+              {t.nav.plans}
+            </button>
+
+            <button
+              onClick={() => handleNavClick('onetoone')}
+              className={`text-xs font-semibold tracking-[0.15em] uppercase transition ${
+                activeTab === 'onetoone' ? 'text-[#8B5E34] border-b-2 border-[#8B5E34] pb-1' : 'text-[#5C534E] hover:text-[#2C2421]'
+              }`}
+            >
+              {t.nav.oneToOne}
             </button>
           </nav>
 
-          {/* Right Header Widgets: Music, Language Switcher, User Auth */}
-          <div className="hidden sm:flex items-center gap-3">
-            {/* Ambient Music */}
-            <MusicControl />
-
-            {/* Language Switcher */}
-            <div className="flex items-center bg-stone-100/90 rounded-full p-1 border border-stone-200 text-xs">
+          {/* Right Header Controls */}
+          <div className="hidden sm:flex items-center gap-5">
+            
+            {/* Simple Language Switcher EN | తెలుగు */}
+            <div className="flex items-center gap-2 text-xs font-semibold tracking-wider text-[#5C534E]">
               <button
                 onClick={() => setLanguage('en')}
-                className={`px-2.5 py-1 rounded-full font-semibold transition ${
-                  language === 'en'
-                    ? 'bg-amber-600 text-white shadow-xs'
-                    : 'text-stone-600 hover:text-stone-900'
-                }`}
+                className={`transition ${language === 'en' ? 'text-[#2C2421] font-bold underline underline-offset-4' : 'hover:text-[#2C2421]'}`}
               >
-                English
+                EN
               </button>
+              <span className="text-[#B5ACA3]">|</span>
               <button
                 onClick={() => setLanguage('te')}
-                className={`px-2.5 py-1 rounded-full font-semibold transition ${
-                  language === 'te'
-                    ? 'bg-amber-600 text-white shadow-xs'
-                    : 'text-stone-600 hover:text-stone-900'
-                }`}
+                className={`transition ${language === 'te' ? 'text-[#2C2421] font-bold underline underline-offset-4' : 'hover:text-[#2C2421]'}`}
               >
                 తెలుగు
               </button>
             </div>
 
-            {/* User Account / Login Button */}
+            {/* Ambient Music Toggle Button ♪ AMBIENT */}
+            <MusicControl />
+
+            {/* Admin link */}
+            <button
+              onClick={() => handleNavClick('admin')}
+              className="text-[#7A7067] hover:text-[#2C2421] p-1.5 rounded-full transition"
+              title="Admin Portal"
+            >
+              <Shield className="w-4 h-4" />
+            </button>
+
+            {/* LOGIN / DASHBOARD Button - Matching reference purple button `#3B234A` */}
             {user.isLoggedIn ? (
               <button
                 onClick={() => handleNavClick('dashboard')}
-                className="flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-700 hover:to-amber-800 text-white font-medium text-sm shadow-md shadow-amber-600/20 transition group"
+                className="px-6 py-2.5 rounded-full bg-[#3B234A] hover:bg-[#2C1838] text-white font-semibold text-xs tracking-[0.15em] uppercase shadow-sm transition flex items-center gap-2"
               >
-                <User className="w-4 h-4 text-amber-200 group-hover:scale-110 transition-transform" />
-                <span className="max-w-[100px] truncate">{user.name.split(' ')[0]}</span>
-                {user.subscription.hasActivePlan && (
-                  <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
-                )}
+                <User className="w-3.5 h-3.5" />
+                <span>{user.name.split(' ')[0]}</span>
               </button>
             ) : (
               <button
                 onClick={openAuthModal}
-                className="flex items-center gap-1.5 px-4 py-2 rounded-full bg-amber-600 hover:bg-amber-700 text-white font-medium text-sm shadow-sm transition"
+                className="px-7 py-2.5 rounded-full bg-[#3B234A] hover:bg-[#2C1838] text-white font-semibold text-xs tracking-[0.15em] uppercase shadow-sm transition"
               >
-                <User className="w-4 h-4" />
-                <span>{t.nav.login}</span>
+                {t.nav.login}
               </button>
             )}
           </div>
 
-          {/* Mobile Menu Hamburger Button */}
-          <div className="flex sm:hidden items-center gap-2">
+          {/* Mobile Hamburger Button */}
+          <div className="flex sm:hidden items-center gap-3">
             <MusicControl />
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-stone-700 hover:bg-amber-50 focus:outline-none"
+              className="p-2 rounded-lg text-[#2C2421] hover:bg-[#EFE9DD] focus:outline-none"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -149,73 +147,55 @@ export const Header: React.FC<HeaderProps> = ({ activeTab, setActiveTab }) => {
         </div>
       </div>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="sm:hidden glass-panel border-b border-amber-200 px-4 pt-3 pb-6 space-y-3 animate-fadeIn">
-          {/* Language Switcher Mobile */}
-          <div className="flex justify-between items-center pb-3 border-b border-amber-100">
-            <span className="text-xs font-semibold text-stone-500 uppercase tracking-wider">Language</span>
-            <div className="flex bg-stone-100 rounded-full p-1 border border-stone-200 text-xs">
+        <div className="sm:hidden bg-[#F8F5EE] border-b border-[#E6E0D2] px-6 pt-4 pb-6 space-y-4 animate-fadeIn">
+          <div className="flex justify-between items-center pb-3 border-b border-[#E6E0D2]">
+            <span className="text-xs font-semibold text-[#7A7067] uppercase tracking-wider">Language</span>
+            <div className="flex gap-3 text-xs font-semibold">
               <button
                 onClick={() => setLanguage('en')}
-                className={`px-3 py-1 rounded-full font-semibold transition ${
-                  language === 'en' ? 'bg-amber-600 text-white' : 'text-stone-600'
-                }`}
+                className={`px-3 py-1 rounded-full ${language === 'en' ? 'bg-[#3B234A] text-white' : 'text-[#5C534E]'}`}
               >
-                English
+                EN
               </button>
               <button
                 onClick={() => setLanguage('te')}
-                className={`px-3 py-1 rounded-full font-semibold transition ${
-                  language === 'te' ? 'bg-amber-600 text-white' : 'text-stone-600'
-                }`}
+                className={`px-3 py-1 rounded-full ${language === 'te' ? 'bg-[#3B234A] text-white' : 'text-[#5C534E]'}`}
               >
                 తెలుగు
               </button>
             </div>
           </div>
 
-          {/* Nav items mobile */}
-          <div className="space-y-1">
-            {navItems.map((item) => (
+          <div className="space-y-2">
+            {['home', 'sessions', 'about', 'plans', 'onetoone', 'admin'].map((id) => (
               <button
-                key={item.id}
-                onClick={() => handleNavClick(item.id)}
-                className={`w-full text-left px-4 py-2.5 rounded-xl font-medium text-sm transition ${
-                  activeTab === item.id
-                    ? 'bg-amber-100 text-amber-900 font-bold'
-                    : 'text-stone-800 hover:bg-amber-50'
+                key={id}
+                onClick={() => handleNavClick(id)}
+                className={`w-full text-left px-4 py-3 rounded-xl text-xs font-bold tracking-widest uppercase transition ${
+                  activeTab === id ? 'bg-[#EFE9DD] text-[#3B234A]' : 'text-[#2C2421]'
                 }`}
               >
-                {item.label}
+                {t.nav[id as keyof typeof t.nav]}
               </button>
             ))}
-            <button
-              onClick={() => handleNavClick('admin')}
-              className="w-full text-left px-4 py-2.5 rounded-xl font-semibold text-sm bg-stone-900 text-amber-300 flex items-center justify-between"
-            >
-              <span>{t.nav.admin}</span>
-              <Shield className="w-4 h-4" />
-            </button>
           </div>
 
-          {/* Auth Button Mobile */}
           <div className="pt-2">
             {user.isLoggedIn ? (
               <button
                 onClick={() => handleNavClick('dashboard')}
-                className="w-full py-3 rounded-xl bg-amber-600 text-white font-semibold text-center flex items-center justify-center gap-2 shadow-md"
+                className="w-full py-3 rounded-full bg-[#3B234A] text-white font-bold text-xs tracking-widest uppercase text-center"
               >
-                <User className="w-4 h-4" />
-                <span>{t.nav.dashboard} ({user.name})</span>
+                {t.nav.dashboard} ({user.name})
               </button>
             ) : (
               <button
                 onClick={() => { openAuthModal(); setMobileMenuOpen(false); }}
-                className="w-full py-3 rounded-xl bg-amber-600 text-white font-semibold text-center flex items-center justify-center gap-2 shadow-md"
+                className="w-full py-3 rounded-full bg-[#3B234A] text-white font-bold text-xs tracking-widest uppercase text-center"
               >
-                <User className="w-4 h-4" />
-                <span>{t.nav.login}</span>
+                {t.nav.login}
               </button>
             )}
           </div>

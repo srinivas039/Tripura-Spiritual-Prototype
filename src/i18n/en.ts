@@ -1,69 +1,70 @@
 export const en = {
   nav: {
-    brand: "TRIPURA SPIRITUAL",
-    home: "Home",
-    about: "About",
-    sessions: "Sessions",
-    demoClass: "Demo Class",
-    plans: "Plans",
-    oneToOne: "1-on-1 Guidance",
-    login: "Login",
-    dashboard: "My Dashboard",
-    profile: "Profile",
-    admin: "Admin Console",
-    logout: "Logout"
+    brand: "T R I P U R A .",
+    home: "HOME",
+    about: "ABOUT",
+    sessions: "SESSIONS",
+    demoClass: "DEMO CLASS",
+    plans: "PLANS",
+    oneToOne: "1-ON-1 GUIDANCE",
+    login: "LOGIN",
+    dashboard: "MY DASHBOARD",
+    profile: "PROFILE",
+    admin: "ADMIN",
+    logout: "LOGOUT"
   },
   hero: {
-    title: "Awaken Your Inner Peace",
-    subtitle: "Experience meaningful spiritual sessions, guided learning, and transformative daily practices designed to elevate your conscious mind.",
-    exploreSessions: "Explore Sessions",
-    watchDemo: "Watch Demo",
-    liveSessions: "Live Spiritual Sessions",
-    recordedClasses: "Recorded Classes Access",
-    flexibleLearning: "Flexible Self-Paced Learning",
-    personalGuidance: "Personal One-to-One Guidance"
+    tagline: "MEDITATION • HEALING • INNER TRANSFORMATION",
+    title: "Be present. Be open. Be you.",
+    subtitle: "A quiet space to slow down, reconnect with yourself and explore the practices that have carried people for centuries — taught simply, for modern life.",
+    exploreSessions: "EXPLORE SESSIONS",
+    watchDemo: "TRY A DEMO CLASS",
+    liveSessions: "Live Guided Sessions",
+    recordedClasses: "Easy Video Access",
+    flexibleLearning: "Learn At Your Own Pace",
+    personalGuidance: "Personal Mentor Support"
   },
   aboutSection: {
-    title: "About Tripura Spiritual",
-    motto: "Learn • Practice • Transform",
-    desc: "Tripura Spiritual is a sanctuary for spiritual seekers. We bridge ancient wisdom with modern living through curated live courses, meditation techniques, and dedicated personal mentorship.",
-    learnMore: "Learn More About Us"
+    title: "A Peaceful Space for Spiritual Seeking",
+    motto: "SIMPLE • AUTHENTIC • TRANSFORMATIVE",
+    desc: "Tripura Spiritual provides clear, gentle guidance for meditation and inner wellbeing. Designed with simplicity, our sessions bring peace of mind into your daily life without complexity.",
+    learnMore: "Read Our Story"
   },
   upcomingSessions: {
-    title: "Upcoming Spiritual Session",
-    subtitle: "Join our signature 11-day immersion program for mental clarity and inner balance.",
+    title: "Upcoming Sessions",
+    subtitle: "Join our gentle 11-day spiritual immersion designed for peace, mental clarity, and daily practice.",
     session11Title: "11-Day Spiritual Intensive Session",
     dates: "September 1 – September 11",
-    liveGuidance: "Daily Live Interactive Guidance",
-    recordingsIncluded: "24/7 Full Recording Access Included",
-    languages: "Available in English & తెలుగు",
-    viewDetails: "View Session Details",
-    statusLive: "Live Immersion"
+    liveGuidance: "Daily Live Guided Classes",
+    recordingsIncluded: "24/7 Unlimited Video Access",
+    languages: "Taught in English & తెలుగు",
+    viewDetails: "VIEW SESSION DETAILS",
+    statusLive: "Live Session"
   },
   demoSection: {
     title: "Experience Before You Begin",
-    subtitle: "Watch a sample spiritual session and experience our teaching methodology firsthand.",
-    demoClassTitle: "Demo Spiritual Immersion Class",
-    duration: "45 Minutes Interactive Session",
+    subtitle: "Watch a sample class and experience our gentle meditation style.",
+    demoClassTitle: "Demo Spiritual Class",
+    duration: "45 Minutes Class",
     price: "₹99",
-    watchPreview: "Watch Free Preview",
-    buyDemo: "Buy Full Demo Access (₹99)"
+    watchPreview: "WATCH FREE PREVIEW",
+    buyDemo: "BUY DEMO ACCESS (₹99)"
   },
   plansSection: {
-    title: "Flexible Learning Plans",
-    subtitle: "Choose the subscription path that best fits your spiritual journey.",
-    viewAll: "View All Plans",
-    choosePlan: "Choose Plan",
-    prototypeNotice: "Prototype Demo Pricing — Simulated Payment Flow",
-    popular: "Most Popular",
+    title: "Simple & Clear Plans",
+    subtitle: "Select a path that comfortably fits your daily routine.",
+    viewAll: "VIEW ALL PLANS",
+    choosePlan: "CHOOSE PLAN",
+    prototypeNotice: "Simple Prototype Demo Pricing",
+    popular: "Recommended",
     plan11: {
       name: "11-Day Session Plan",
       price: "₹599",
       features: [
         "Full Live Session Access (11 Days)",
-        "Daily Guided Meditation & Practice",
-        "Full Access to Class Recordings",
-        "Bilingual Content (English & Telugu)",
+        "Daily Guided Meditation & Gentle Practice",
+        "Unlimited Watch Access to Recordings",
+        "Available in English & Telugu",
         "Validity: 30 Days"
       ]
     },
@@ -71,42 +72,42 @@ export const en = {
       name: "21-Day Session Plan",
       price: "₹999",
       features: [
-        "Extended Live Session Immersion",
-        "Previous Session Archive Recordings",
+        "Extended 21-Day Practice Immersion",
+        "Access to Previous Session Archives",
         "Extended Recording Access (60 Days)",
-        "Priority Q&A during Live Classes",
-        "Bilingual Content (English & Telugu)"
+        "Priority Questions in Live Classes",
+        "Available in English & Telugu"
       ]
     },
     recordingPlan: {
       name: "Recording Access Plan",
       price: "₹599",
       features: [
-        "Unlimited On-Demand Recording Access",
-        "All Eligible Past Intensive Classes",
-        "HD Video Player with Multi-Speed",
-        "Bilingual Audio Track Support",
+        "On-Demand Video Recording Access",
+        "All Past Intensive Classes",
+        "Easy Large-Text Video Player",
+        "English & Telugu Audio Options",
         "Validity: 30 Days"
       ]
     },
     newUserPlan: {
-      name: "New User Full Access",
+      name: "New Learner Full Access",
       price: "₹1,000",
       features: [
         "All Live Sessions & Past Recordings",
-        "1-on-1 Intro Guidance Discount",
-        "Unlimited Streaming for 90 Days",
+        "1-on-1 Guidance Discount",
+        "90 Days Access",
         "English & Telugu Support"
       ]
     }
   },
   oneToOne: {
-    title: "Personal Spiritual Guidance",
-    subtitle: "Book a 1-on-1 private consultation with an experienced spiritual guide.",
-    bookSession: "Book One-to-One Session",
+    title: "Personal Guidance",
+    subtitle: "Book a quiet 1-on-1 consultation with an experienced spiritual guide.",
+    bookSession: "BOOK SESSION",
     categories: {
-      spiritual: "Spiritual Direction & Wisdom",
-      meditation: "Guided Meditation & Breathwork",
+      spiritual: "Spiritual Guidance & Clarity",
+      meditation: "Guided Breathwork & Meditation",
       personal: "Personal Life Consultation",
       special: "Special Energy Session"
     },
@@ -114,73 +115,73 @@ export const en = {
     mins60: "60 Minutes — ₹899"
   },
   dashboard: {
-    welcome: "Welcome Back",
+    welcome: "Welcome",
     activePlan: "Your Active Plan",
     status: "Status",
-    statusActive: "Active Subscription",
+    statusActive: "Active",
     statusInactive: "No Active Plan",
     validUntil: "Valid Until",
-    continueLearning: "Continue Learning",
+    continueLearning: "CONTINUE LEARNING",
     myRecordings: "My Session Recordings",
-    watch: "Watch Recording",
-    locked: "Locked",
-    unlockPrompt: "Purchase a plan to unlock this recording",
+    watch: "WATCH RECORDING",
+    locked: "LOCKED",
+    unlockPrompt: "Choose a plan to watch this recording",
     day: "Day",
-    expiryInfo: "Access available until"
+    expiryInfo: "Access valid until"
   },
   auth: {
-    title: "Login / Register",
-    mobileLabel: "Mobile Number",
-    sendOtp: "Send OTP",
+    title: "Sign In to Tripura",
+    mobileLabel: "Enter Your Mobile Number",
+    sendOtp: "SEND OTP",
     enterOtp: "Enter Verification OTP",
-    verifyOtp: "Verify & Proceed",
-    demoOtpNotice: "Demo Verification OTP: 123456",
-    quickDemoUsers: "Quick Prototype Login Switcher",
+    verifyOtp: "VERIFY & SIGN IN",
+    demoOtpNotice: "Demo OTP Code: 123456",
+    quickDemoUsers: "Quick Demo Login",
     loginSubscribed: "Login as Subscribed User (9999999999)",
-    loginRestricted: "Login as Unsubscribed User (8888888888)"
+    loginRestricted: "Login as New User (8888888888)"
   },
   payment: {
     title: "Order Summary",
-    methodTitle: "Select Payment Method",
+    methodTitle: "Select How You Wish to Pay",
     upi: "UPI (Google Pay / PhonePe / Paytm)",
-    upiQr: "UPI QR Code Instant Scan",
+    upiQr: "Scan UPI QR Code",
     card: "Credit / Debit Card",
     netBanking: "Net Banking",
-    payButton: "Pay Now",
-    demoDisclaimer: "DEMO PAYMENT — NO REAL FINANCIAL TRANSACTION",
-    processing: "Processing Payment securely...",
+    payButton: "PAY NOW",
+    demoDisclaimer: "DEMO PAYMENT — NO REAL MONEY NEEDED",
+    processing: "Processing securely...",
     successTitle: "Payment Successful!",
     txnId: "Transaction ID",
-    status: "Payment Status",
+    status: "Status",
     planActivated: "Plan Activated",
-    validity: "Subscription Valid Until",
-    goToDashboard: "Go to My Dashboard"
+    validity: "Valid Until",
+    goToDashboard: "GO TO MY DASHBOARD"
   },
   admin: {
-    title: "Admin Management Portal",
-    subtitle: "Manage platform users, subscription states, and recording access controls.",
+    title: "Admin Panel",
+    subtitle: "Manage platform users and recording access.",
     totalUsers: "Total Users",
     activeSubscribers: "Active Subscribers",
     totalPayments: "Total Revenue",
     activeSessions: "Active Sessions",
-    recordingsCount: "Uploaded Recordings",
-    userTable: "User Subscription & Access Management",
-    toggleLock: "Toggle Access State"
+    recordingsCount: "Recordings",
+    userTable: "User Access Controls",
+    toggleLock: "Toggle Access"
   },
   music: {
-    label: "Background Music",
-    playing: "Music Playing",
-    paused: "Music Paused",
-    mute: "Mute Sound",
-    unmute: "Unmute Sound"
+    label: "AMBIENT MUSIC",
+    playing: "AMBIENT ON",
+    paused: "AMBIENT PAUSED",
+    mute: "Mute",
+    unmute: "Unmute"
   },
   footer: {
-    aboutText: "Tripura Spiritual is committed to guiding individuals towards inner harmony, self-realization, and serene living through timeless spiritual learning.",
-    quickLinks: "Quick Links",
-    legal: "Legal & Support",
+    aboutText: "Tripura Spiritual provides simple, authentic, and peaceful spiritual learning for daily tranquility.",
+    quickLinks: "Quick Navigation",
+    legal: "Support & Information",
     privacy: "Privacy Policy",
-    terms: "Terms & Conditions",
-    contact: "Contact Support",
-    disclaimer: "Prototype Demo Website — tripuraspiritual.com"
+    terms: "Terms of Use",
+    contact: "Contact Us",
+    disclaimer: "Tripura Spiritual — tripuraspiritual.com"
   }
 };

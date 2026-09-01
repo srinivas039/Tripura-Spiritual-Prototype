@@ -32,16 +32,7 @@ export const Plans: React.FC = () => {
       popular: false,
       desc: "Dedicated on-demand recording archive access for flexible hours.",
       features: t.plansSection.recordingPlan.features
-    },
-    // {
-    //   id: 'new-user',
-    //   name: t.plansSection.newUserPlan.name,
-    //   price: 1000,
-    //   period: "90 Days Validity",
-    //   popular: false,
-    //   desc: "All-inclusive lifetime intro package with private 1-on-1 discount.",
-    //   features: t.plansSection.newUserPlan.features
-    // }
+    }
   ];
 
   return (
