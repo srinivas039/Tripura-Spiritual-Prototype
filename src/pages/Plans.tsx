@@ -53,8 +53,8 @@ export const Plans: React.FC = () => {
           <div
             key={plan.id}
             className={`glass-card rounded-3xl p-6 border flex flex-col justify-between transition-all duration-300 relative ${plan.popular
-                ? 'border-2 border-amber-500 shadow-xl bg-amber-50/50 transform lg:-translate-y-2'
-                : 'border-amber-200 shadow-md hover:shadow-lg'
+              ? 'border-2 border-amber-500 shadow-xl bg-amber-50/50 transform lg:-translate-y-2'
+              : 'border-amber-200 shadow-md hover:shadow-lg'
               }`}
           >
             {plan.popular && (
@@ -90,8 +90,8 @@ export const Plans: React.FC = () => {
             <button
               onClick={() => openPaymentModal({ id: plan.id, name: plan.name, price: plan.price, type: 'plan' })}
               className={`mt-6 w-full py-3 rounded-xl font-bold text-sm transition shadow-md ${plan.popular
-                  ? 'bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white shadow-amber-600/30'
-                  : 'bg-amber-600 hover:bg-amber-700 text-white'
+                ? 'bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700 text-white shadow-amber-600/30'
+                : 'bg-amber-600 hover:bg-amber-700 text-white'
                 }`}
             >
               {t.plansSection.choosePlan}
@@ -108,7 +108,6 @@ export const Plans: React.FC = () => {
         </p>
         <p>Selecting any plan will launch the prototype payment gateway where you can simulate a successful UPI QR / Card transaction.</p>
       </div>
-
     </div>
   );
 };
